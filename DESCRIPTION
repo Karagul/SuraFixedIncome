@@ -1,0 +1,10 @@
+Package: SuraFixedIncome
+Type: Package
+Title: Sura Asset Management Fixed income
+Version: 0.1.0
+Author: Daniel Velasquez <daniel.velasquez@sura-am.com>
+Maintainer: Daniel Velasquez <daniel.velasquez@sura-am.com>
+Description: Fixed income functions.
+License: SUAM
+Encoding: UTF-8
+LazyData: true
