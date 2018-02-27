@@ -25,11 +25,12 @@ bond_price_float <- function (date_ini, disc_mar, coupon, matur, freq, conv, ser
 
 
     date_prev=tail(cpn_dates[cpn_dates < date_ini],1)
-    float_rate_1=serie_float_rate[which(serie_float_rate[,1]==date_ini),2]
+    float_rate_1=as.numeric(serie_float_rate[findInterval(date_ini, index(serie_float_rate))])
     if(length(float_rate_1)==0){stop("Actualizar Series de Indices!!")}
     coupon=rep(float_rate_1+coupon,lfutcpn)
     if(in_arrears==0){
-      float_rate_0=serie_float_rate[which(serie_float_rate[,1]==date_prev),2]
+
+      float_rate_0=as.numeric(serie_float_rate[findInterval(date_prev, index(serie_float_rate))])
       coupon[1]=float_rate_0+coupon0
     }
 
